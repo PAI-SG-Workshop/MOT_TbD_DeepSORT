@@ -1,0 +1,103 @@
+{
+ "tracker": "deepsort",
+ "run": "kittimots_v26_reid",
+ "source": "kittimots",
+ "split": "val",
+ "detections": {
+  "version": "v26",
+  "weights": "runs/image_v26/checkpoints/image_v26_kittimots_e030.pth",
+  "source": "kittimots",
+  "split": "val",
+  "input": "1216x384",
+  "conf": 0.05,
+  "classes": [
+   "car",
+   "pedestrian"
+  ],
+  "epoch": 30,
+  "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "torch": "2.5.1+cu124",
+  "det_ms_median": 8.808608996332623,
+  "det_ms_p95": 9.033413007273339,
+  "params_M": 2.50458,
+  "reid_weights": "/home/minsoogo/Physical_AI/projects/dev3_mot_det_wide/runs/reid/reid_r18_kittimots.pth",
+  "reid_min_score": 0.1,
+  "reid_ms_median": 2.9127230644226074,
+  "reid_ms_p95": 4.835698127746582,
+  "reid_val": {
+   "car": {
+    "rank1": 0.946,
+    "mAP": 0.6400399259113395,
+    "queries": 500
+   },
+   "pedestrian": {
+    "rank1": 0.9644670050761421,
+    "mAP": 0.7508108430471819,
+    "queries": 197
+   },
+   "all": {
+    "rank1": 0.9483500717360115,
+    "mAP": 0.6632532977495614,
+    "queries": 697
+   }
+  }
+ },
+ "tracker_ms": {
+  "median": 0.15183500363491476,
+  "p95": 0.5112689977977425,
+  "frames": 2981
+ },
+ "detector_ms": {
+  "median": 8.808609008789062,
+  "p95": 9.03341293334961
+ },
+ "reid_ms": {
+  "median": 2.9127230644226074,
+  "p95": 4.835698127746582
+ },
+ "score_thr": null,
+ "causal_check": "OK",
+ "per_class": {
+  "car": {
+   "HOTA": 0.37338463479692224,
+   "DetA": 0.28836134808160047,
+   "AssA": 0.4864935432595907,
+   "LocA": 0.8555692519887486,
+   "MOTA": 0.3295553618134263,
+   "MOTP": 0.8363464305763828,
+   "IDF1": 0.46108555657773687,
+   "IDSW": 29,
+   "Frag": 51,
+   "GT_IDs": null,
+   "CLR_TP": 2758,
+   "CLR_FN": 5271,
+   "CLR_FP": 83
+  },
+  "pedestrian": {
+   "HOTA": 0.0,
+   "DetA": 0.0,
+   "AssA": 0.0,
+   "LocA": 1.0,
+   "MOTA": 0.0,
+   "MOTP": 0.0,
+   "IDF1": 0.0,
+   "IDSW": 0,
+   "Frag": 0,
+   "GT_IDs": null,
+   "CLR_TP": 0,
+   "CLR_FN": 3347,
+   "CLR_FP": 0
+  }
+ },
+ "mean": {
+  "HOTA": 0.18669231739846112,
+  "DetA": 0.14418067404080023,
+  "AssA": 0.24324677162979536,
+  "LocA": 0.9277846259943743,
+  "MOTA": 0.16477768090671316,
+  "MOTP": 0.4181732152881914,
+  "IDF1": 0.23054277828886843,
+  "IDSW": 29,
+  "Frag": 51
+ }
+}
